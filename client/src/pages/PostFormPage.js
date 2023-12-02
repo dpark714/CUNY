@@ -4,6 +4,7 @@ import ErrorAlert from "../components/ErrorAlert";
 
 function PostFormPage() {
   const [content, setContent] = useState("");
+  const [file, setFile] = useState(null); // Ensure setFile is defined here
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState(false);
 
@@ -11,18 +12,23 @@ function PostFormPage() {
     setContent(event.target.value);
   };
 
+  const handleFileChange = (event) => {
+    setFile(event.target.files[0]);
+  };
+
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
+      const formData = new FormData();
+      formData.append("content", content);
+      if (file) {
+        formData.append("file", file);
+      }
+
       let response = await fetch("/api/micro_posts", {
         method: "POST",
         credentials: "include",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          content: content,
-        }),
+        body: formData,
       });
 
       if (response.ok) {
@@ -42,19 +48,33 @@ function PostFormPage() {
     <div className="col-10 col-md-8 col-lg-7">
       {error && <ErrorAlert details={"Failed to save the content"} />}
       <form onSubmit={handleSubmit}>
-        <div className="input-group">
+        <div className="mb-3">
+          <label htmlFor="content" className="form-label">
+           Message
+          </label>
           <input
             type="text"
-            placeholder="Add your words of wisdom here..."
-            value={content}
+            id="content"
             className="form-control"
+            value={content}
             onChange={handleContentChange}
             autoFocus
           />
-          <button type="submit" className="btn btn-primary">
-            Save Post
-          </button>
         </div>
+        <div className="mb-3">
+          <label htmlFor="file" className="form-label">
+            Upload File
+          </label>
+          <input
+            type="file"
+            id="file"
+            className="form-control"
+            onChange={handleFileChange}
+          />
+        </div>
+        <button type="submit" className="btn btn-primary">
+          Save Post
+        </button>
       </form>
     </div>
   );

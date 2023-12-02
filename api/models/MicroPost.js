@@ -13,6 +13,9 @@ module.exports = (sequelize, DataTypes) => {
           notEmpty: true,
         },
       },
+      filePath: {
+        type: DataTypes.STRING, // This field will store the path to the uploaded file
+      },
     },
     {
       sequelize,
@@ -23,6 +26,7 @@ module.exports = (sequelize, DataTypes) => {
   MicroPost.associate = (models) => {
     // associations can be defined here
   };
+
 
   return MicroPost;
 };

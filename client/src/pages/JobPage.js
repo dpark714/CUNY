@@ -1,29 +1,24 @@
 import React from 'react';
-import "../pages/style/JobPage.css";
+import NavBar from '../components/NavBar';
+import '../pages/style/JobPage.css'; // Ensure the CSS file is correctly referenced
+import PostFormPage from "../pages/PostFormPage";
+import PostsListPage from "../pages/PostsListPage"
 
 function JobPage() {
     return (
-        <nav>
-            <ul className="navbar">
-                <li className="dropdown">
-                    <a href="#" className="jobDetails dropbtn">CareerConnect</a>
-                    <div className="dropdown-content">
-                        <a href="#">Full Time</a>
-                        <a href="#">Part Time</a>
-                        <a href="#">Internship</a>
-                        <a href="#">Referral</a>
-                    </div>
-                </li>
-                <li className="dropdown">
-                    <a href="#" className="jobDetails dropbtn">CareerCrafters</a>
-                    <div className="dropdown-content">
-                        <a href="#">Resume Help</a>
-                        <a href="#">Resume Building</a>
-                    </div>
-                </li>
-                <li><a className="jobDetails" href="#">About</a></li>
-            </ul>
-        </nav>
+        <div className="job-page">
+        <NavBar/>
+            <div className="career-connect">
+                <h1>CareerConnect</h1>
+                 {/* Add content for CareerConnect here  */}
+                 {/* <PostFormPage />
+                 <PostsListPage /> */}
+            </div>
+            <div className="career-crafters">
+                <h1>CareerCrafters</h1>
+                {/* Add content for CareerCrafters here  */}
+            </div>
+        </div>
     );
 }
 

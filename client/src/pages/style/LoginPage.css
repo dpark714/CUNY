@@ -20,12 +20,23 @@
 }
 
 .noAccount p {
-    color: white;
+    color: #D5E3F1;
+    margin-top: 50px;
+}
 
+.noAccount p:last-child {
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: underline;
 }
-.noAccount .signup:hover {
-    cursor: pointer; 
+
+.noAccount p:last-child:hover{
+    color: orange;
+    cursor: pointer;
 }
+
+
 .rightSide {
     background-color: #f3f3f3;
 }

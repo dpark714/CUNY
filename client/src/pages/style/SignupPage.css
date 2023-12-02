@@ -59,21 +59,20 @@
     color: #96e894;
 }
 
-.yesAccount {
-    margin-top: 20px;
-    text-align: center;
-}
-
 .yesAccount p {
     color: #D5E3F1;
-    font-size: 40%;
     margin-top: 50px;
 }
 
 .yesAccount p:last-child {
-    color: navy;
+    text-align: center;
     font-weight: bold;
-    font-size: 30%;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.yesAccount p:last-child:hover {
+    color: orange;
     cursor: pointer;
 }
 
@@ -100,6 +99,19 @@ form select {
     border-radius: 5px;
     box-sizing: border-box;
 }
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
 
 form button {
     width: 100%;
