@@ -38,6 +38,11 @@
   margin: 20px;
 }
 
+.menu-button:hover {
+  color: #0033a1; 
+  background: none; 
+}
+
 .login-button,
 .signup-button {
   font-weight: 700;
