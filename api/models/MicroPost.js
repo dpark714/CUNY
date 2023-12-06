@@ -1,8 +1,10 @@
 "use strict";
 const { Model } = require("sequelize");
 
+
 module.exports = (sequelize, DataTypes) => {
   class MicroPost extends Model {}
+
 
   MicroPost.init(
     {
@@ -14,7 +16,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       },
       filePath: {
-        type: DataTypes.STRING, // This field will store the path to the uploaded file
+        type: DataTypes.BLOB,
       },
     },
     {
@@ -23,6 +25,7 @@ module.exports = (sequelize, DataTypes) => {
     }
   );
 
+
   MicroPost.associate = (models) => {
     // associations can be defined here
   };
@@ -30,3 +33,5 @@ module.exports = (sequelize, DataTypes) => {
 
   return MicroPost;
 };
+
+

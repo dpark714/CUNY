@@ -1,24 +1,25 @@
 import React from "react";
 import "../pages/style/AboutUsPage.css";
-import NavBar from '../components/NavBar';
+import NavBar from "../components/NavBar";
 
 function AboutUsPage(props) {
   return (
     <div className="aboutUsPage">
-<NavBar />
+      <NavBar />
+      <div className="container-fluid">
       <div className="col text-center">
-        <h2 className="mb-3">About CUNY Sphere</h2>
+        <h2 className="mb-3">Our Mission</h2>
         <p className="mb-5">
-          Navigating the digital landscape of education, students often struggle
-          to find reliable resources and connect with peers who share their
-          academic interests. Our team at CUNY Sphere addresses this challenge,
-          a specialized online platform for CUNY computer majors. We provide
-          comprehensive academic support, student assistance, and opportunities
-          for meaningful connections. Dedicated to enhancing the educational
-          experience, our team is committed to empowering CUNY students for
-          success.
+          Our mission at CUNY Sphere is two-fold. First and foremost, we are
+          committed students dedicated to elevating the college life experience
+          at CUNY. Through innovative ideas and initiatives, we strive to create
+          a supportive and vibrant community for our fellow students.
+          <pre /> Simultaneously, we are passionate about pursuing our careers
+          in Software Engineering. The skills and insights gained from our
+          academic journey and the CUNY Tech Prep program empower us to
+          contribute meaningfully to the ever-evolving field of technology.
         </p>
-        <h2 className="mb-3"> MEET THE TEAM</h2>
+        <h2 className="mb-3">Meet the Team</h2>
         <div className="row">
           <div className="col-lg-6">
             <img src="../Amir.jpeg" className="about_img"></img> <br></br>
@@ -59,10 +60,14 @@ function AboutUsPage(props) {
               </svg>
             </a>
             <p className="description">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Dignissimos in itaque nihil consectetur qui natus similique
-              nostrum molestias, ipsa explicabo hic impedit aspernatur. Ipsa
-              provident neque culpa alias incidunt amet.
+              Amir Hamza stands out as an experienced full-stack software
+              engineer, recognized for his proficiency in crafting smooth user
+              interfaces and resilient backend systems. Possessing a diverse
+              skill set and a dedication to staying ahead of industry
+              advancements, Amir thrives in providing top-notch solutions. His
+              collaborative approach, adept problem-solving abilities, and
+              unwavering commitment to ongoing learning position him as a
+              valuable contributor to any development team.
             </p>
           </div>
           <div className="col-lg-6">
@@ -88,7 +93,11 @@ function AboutUsPage(props) {
                 <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
               </svg>
             </a>
-            <a href="https://github.com/ZhangBenjamin" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://github.com/ZhangBenjamin"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="1em"
@@ -149,7 +158,8 @@ function AboutUsPage(props) {
               College of New York, has been navigating her academic journey with
               a diverse mix of groups. Her passion lies in Web Development and
               Android App Development, and lately, her curiosity has led her
-              into the world of AI. When she's not diving into projects, you will find her chilling at cafes.
+              into the world of AI. When she's not diving into projects, you
+              will find her chilling at cafes.
             </p>
           </div>
           <div className="col-lg-6">
@@ -175,7 +185,7 @@ function AboutUsPage(props) {
                 <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
               </svg>
             </a>
-            <a href="" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/Omar0147" target="_blank" rel="noopener noreferrer">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="1em"
@@ -187,14 +197,17 @@ function AboutUsPage(props) {
               </svg>
             </a>
             <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Dignissimos in itaque nihil consectetur qui natus similique
-              nostrum molestias, ipsa explicabo hic impedit aspernatur. Ipsa
-              provident neque culpa alias incidunt amet.
+              Meet Omar Abdullah, a current computer science student in CUNY
+              Queens College. He specialized in the front-end development,
+              ensuring a seamless and intuitive user experience on CUNYSphere.
+              He also worked with our database wizard, handling the vast data
+              management needs with efficiency and precision.
             </p>
           </div>
         </div>
       </div>
+      </div>
+      
     </div>
   );
 }

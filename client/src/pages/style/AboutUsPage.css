@@ -3,7 +3,6 @@
 .aboutUsPage {
     color: black;
     background-color: #F8F9FA; /* Light background color for the entire page */
-    padding: 40px; /* Add padding for better spacing */
     text-align: center; /* Center-align the content */
     font-size: 1.5em;
   }

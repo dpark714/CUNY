@@ -6,26 +6,26 @@ function HomePage() {
   const navigate = useNavigate();
 
   const handleLoginClick = () => {
-    // Navigate to the login page when the "Login" button is clicked
     navigate("/login");
   };
+
   const handleSignupClick = () => {
-    // Navigate to the login page when the "Login" button is clicked
     navigate("/signup");
   };
 
-  
-  const showLoginAndSignUp = true;
+  const handleEnterClick = () => {
+    navigate("/main");
+  };
 
   return (
     <div className="homepage">
       <div className="topContainer">
-      <img src="../cuny-logo.jpeg" alt="CUNY Logo" className="logoImg" />
+        <img src="../cuny-logo.jpeg" alt="CUNY Logo" className="logoImg" />
         <div className="menu">
           <button className="menu-button">
             <a
               href="https://www.cuny.edu/about/administration/offices/cis/cunyfirst/"
-              style={{ textDecoration: "none",color: "#0033a1"}}
+              style={{ textDecoration: "none", color: "#0033a1" }}
             >
               CUNY
             </a>
@@ -39,13 +39,12 @@ function HomePage() {
             </a>
           </button>
           <button className="login-button" onClick={handleLoginClick}>
-          Log In
-        </button>
-        <button className="signup-button" onClick={handleSignupClick}>
-          Sign Up
-        </button>
+            Log In
+          </button>
+          <button className="signup-button" onClick={handleSignupClick}>
+            Sign Up
+          </button>
         </div>
-        
       </div>
 
       <div className="contentContainer">
@@ -62,6 +61,7 @@ function HomePage() {
             </h1>
             <p className="tagline">Uniting Students, Shaping Tomorrows</p>
           </div>
+          <button className="enterButton" onClick={handleEnterClick}>Click</button>
         </div>
         <div className="imageContainer">
           <img src="ctp_homepage.png" alt="CUNY Students" />

@@ -1,8 +1,12 @@
+body, html {
+    margin: 0;
+    /* overflow: hidden; */ /* Comment out or remove this line */
+}
+
 .loginContainer {
     display: flex;
-    height: 100vh; 
+    min-height: 100vh;
     font-family: Arial, sans-serif;
-    
 }
 
 .leftSide, .rightSide {
@@ -14,9 +18,13 @@
 }
 
 .leftSide {
-    background-color: #0033a1; 
+    background-color: #0033a1;
     color: white;
     align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
 }
 
 .noAccount p {
@@ -31,22 +39,23 @@
     text-decoration: underline;
 }
 
-.noAccount p:last-child:hover{
+.noAccount p:last-child:hover {
     color: orange;
     cursor: pointer;
 }
-
 
 .rightSide {
     background-color: #f3f3f3;
 }
 
 .firstTitle {
-    font-size: 2.5em; /* Adjust the font size as needed */
+    font-size: 2.5em;
+    /* Adjust the font size as needed */
 }
 
 .secondTitle {
-    font-size: 1.5em; /* Adjust the font size as needed */
+    font-size: 1.5em;
+    /* Adjust the font size as needed */
 }
 
 .rightSide h1 {
@@ -55,26 +64,35 @@
     padding-bottom: 80px;
 }
 
+.leftSide img {
+    width: 100%; /* Set a width for the image */
+    max-width: 400px; /* Add a max-width to ensure responsiveness */
+}
 
 /* Media Query for Responsiveness */
 @media (max-width: 768px) {
     .loginContainer {
-        flex-direction: column; /* Stack the elements vertically on smaller screens */
+        flex-direction: column;
+        /* Stack the elements vertically on smaller screens */
     }
 
     .leftSide, .rightSide {
-        width: 100%; /* Make both sides take up the full width on smaller screens */
+        width: 100%;
+        /* Make both sides take up the full width on smaller screens */
     }
 
     .firstTitle {
-        font-size: 2em; /* Adjust the font size for smaller screens */
+        font-size: 2em;
+        /* Adjust the font size for smaller screens */
     }
 
     .secondTitle {
-        font-size: 1em; /* Adjust the font size for smaller screens */
+        font-size: 1em;
+        /* Adjust the font size for smaller screens */
     }
 
     form {
-        width: 100%; /* Make the form take up the full width on smaller screens */
+        width: 100%;
+        /* Make the form take up the full width on smaller screens */
     }
 }

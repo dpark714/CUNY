@@ -6,6 +6,10 @@ const path = require("path");
 const db = require("./models");
 const app = express();
 const PORT = process.env.PORT;
+const cors = require('cors');
+
+// Use CORS middleware
+app.use(cors());
 
 // this lets us parse 'application/json' content in http requests
 app.use(express.json());

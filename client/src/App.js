@@ -1,3 +1,6 @@
+// App.js
+
+import { motion } from "framer-motion";
 import React from "react";
 import { BrowserRouter, Routes, Route, Link, NavLink } from "react-router-dom";
 import PostFormPage from "./pages/PostFormPage";
@@ -9,20 +12,21 @@ import HomePage from "./pages/HomePage";
 import JobPage from "./pages/JobPage";
 import NewsPage from "./pages/NewsPage";
 import CoursePage from "./pages/CoursePage";
-
+import CareerConnectPage from "./pages/CareerConnectPage";
+import ResumeFeedbackPage from "./pages/ResumeFeedbackPage";
 import "../src/pages/style/App.css";
 import { AuthProvider } from "./context/AuthContext";
 import PrivateRoute from "./components/PrivateRoute";
+import MainPage from "./pages/MainPage";
 
 function Navigation(props) {
-
   const navStyle = {
     backgroundColor: "#0033a1",
   };
 
   const logoStyle = {
-    width: "100px", // Adjust the width as needed
-    height: "100px", // Maintain the aspect ratio
+    width: "100px",
+    height: "100px",
     objectFit: "cover",
   };
 
@@ -30,12 +34,11 @@ function Navigation(props) {
     <nav className="navbar navbar-expand-sm navbar-dark bg-dark shadow mb-3">
       <div className="container-fluid">
         <Link className="navbar-brand" to="/main">
-          <img src = "../cuny-sphere-preview.png"></img>
+          <img src="../cuny-sphere-preview.png" alt="CUNY Logo" style={logoStyle} />
         </Link>
-        <ul className="navbar-nav me-auto" >
+        <ul className="navbar-nav me-auto">
           <li className="nav-item">
             <NavLink className="nav-link" to="/course">
-              {/* PostFormPage */}
               Course
             </NavLink>
           </li>
@@ -54,34 +57,45 @@ function Navigation(props) {
               About Us
             </NavLink>
           </li>
-          <li className="nav-item"><button>Sign out</button></li>
+          <li className="nav-item">
+            <button>Sign out</button>
+          </li>
         </ul>
       </div>
     </nav>
   );
-} 
+}
 
 function App() {
   return (
     <AuthProvider>
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/login" element={<LoginPage />} />
-        <Route path="/signup" element={<SignupPage />} />
-      </Routes>
-      
-      <div className="container-xl text-center">
-        <div className="row justify-content-center">
+      <BrowserRouter>
+        <div className="container-fluid">
           <Routes>
-            <Route path="/about-us" element={<PrivateRoute>{<AboutUsPage />}</PrivateRoute>}/>
-            <Route path="/job" element={<PrivateRoute>{<JobPage />}</PrivateRoute>}/>
-            <Route path="/news" element={<PrivateRoute>{<NewsPage />}</PrivateRoute>}/>
-            <Route path="/course" element={<PrivateRoute>{<CoursePage />}</PrivateRoute>}/>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/login" element={<LoginPage />} />
+            <Route path="/signup" element={<SignupPage />} />
           </Routes>
+
+          <div className="row justify-content-center">
+            <Routes>
+              <Route path="/main" element={<MainPage />} />
+              <Route path="/about-us" element={<AboutUsPage />} />
+              <Route path="/job" element={<PrivateRoute>{<JobPage />}</PrivateRoute>} />
+              <Route
+                path="/job/career-connect"
+                element={<PrivateRoute>{<CareerConnectPage />}</PrivateRoute>}
+              />
+              <Route
+                path="/job/resume-feedback"
+                element={<PrivateRoute>{<ResumeFeedbackPage />}</PrivateRoute>}
+              />
+              <Route path="/news" element={<PrivateRoute>{<NewsPage />}</PrivateRoute>} />
+              <Route path="/course" element={<PrivateRoute>{<CoursePage />}</PrivateRoute>} />
+            </Routes>
+          </div>
         </div>
-      </div>
-    </BrowserRouter>
+      </BrowserRouter>
     </AuthProvider>
   );
 }

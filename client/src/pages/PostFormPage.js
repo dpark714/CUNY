@@ -1,34 +1,33 @@
 import React, { useState } from "react";
 import { Navigate } from "react-router-dom";
 import ErrorAlert from "../components/ErrorAlert";
+import "../pages/style/PostFormPage.css";
 
 function PostFormPage() {
-  const [content, setContent] = useState("");
-  const [file, setFile] = useState(null); // Ensure setFile is defined here
+  const [data, setData] = useState({ content: "", fileName: "" });
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState(false);
 
-  const handleContentChange = (event) => {
-    setContent(event.target.value);
-  };
-
-  const handleFileChange = (event) => {
-    setFile(event.target.files[0]);
+  const fieldChanged = (name) => {
+    return (event) => {
+      let { value } = event.target;
+      setData((prevData) => ({ ...prevData, [name]: value }));
+    };
   };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const formData = new FormData();
-      formData.append("content", content);
-      if (file) {
-        formData.append("file", file);
-      }
-
       let response = await fetch("/api/micro_posts", {
         method: "POST",
         credentials: "include",
-        body: formData,
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          content: data.content,
+          filePath: data.filePath,
+        }),
       });
 
       if (response.ok) {
@@ -42,40 +41,43 @@ function PostFormPage() {
     }
   };
 
-  if (success) return <Navigate to="/" />;
+  if (success) return <Navigate to="/job/career-crafters" />;
 
   return (
-    <div className="col-10 col-md-8 col-lg-7">
-      {error && <ErrorAlert details={"Failed to save the content"} />}
-      <form onSubmit={handleSubmit}>
-        <div className="mb-3">
-          <label htmlFor="content" className="form-label">
-           Message
-          </label>
-          <input
-            type="text"
-            id="content"
-            className="form-control"
-            value={content}
-            onChange={handleContentChange}
-            autoFocus
-          />
-        </div>
-        <div className="mb-3">
-          <label htmlFor="file" className="form-label">
-            Upload File
-          </label>
-          <input
-            type="file"
-            id="file"
-            className="form-control"
-            onChange={handleFileChange}
-          />
-        </div>
-        <button type="submit" className="btn btn-primary">
-          Save Post
-        </button>
-      </form>
+    <div className="d-flex justify-content-center">
+      <div className="col-lg-7 mx-auto"> {/* Add mx-auto class here */}
+        {error && <ErrorAlert details={"Failed to save the content"} />}
+        <form onSubmit={handleSubmit}>
+          <div className="mb-3">
+            <label htmlFor="content" className="form-label">
+              Message
+            </label>
+            <input
+              type="text"
+              id="content"
+              className="form-control"
+              value={data.content}
+              onChange={fieldChanged("content")}
+              autoFocus
+            />
+          </div>
+          <div className="mb-3">
+            <label htmlFor="file" className="form-label">
+              Upload File
+            </label>
+            <input
+              type="file"
+              id="file"
+              value={data.filePath}
+              className="form-control"
+              onChange={fieldChanged("filePath")}
+            />
+          </div>
+          <button type="submit" className="btn btn-primary">
+            Save Post
+          </button>
+        </form>
+      </div>
     </div>
   );
 }
