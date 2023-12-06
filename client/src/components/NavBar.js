@@ -34,7 +34,7 @@ function NavBar() {
         style={navStyle}
       >
         <div className="container-fluid">
-          <Link className="navbar-brand" to="/main">
+          <Link className="navbar-brand" to="/">
             <img src="../cuny-sphere-preview.png" style={logoStyle} alt="Logo" />
           </Link>
 

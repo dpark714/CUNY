@@ -1,3 +1,4 @@
+/* Add this to your existing CSS file or HomePage.css */
 
 .homepage {
   background-color: #D5E3F1;
@@ -15,7 +16,7 @@
   background-color: white;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-between; /* Changed from flex-end to space-between */
   padding: 1.2em 1.2em 1em 1em;
   width: 100%;
 }
@@ -27,41 +28,41 @@
   margin-right: auto;
 }
 
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
 
-.menu-button {
+.menu-button, .login-button, .signup-button {
   font-weight: 700;
   background: none;
   border: none;
-  text-align: right;
+  text-align: center;
   font-size: 1em;
   text-decoration: none;
-  margin: 20px;
-}
-
-.menu-button:hover {
-  color: #0033a1; 
-  background: none; 
-}
-
-.login-button,
-.signup-button {
-  font-weight: 700;
-  background-color: transparent;
-  border: 1px solid #0033a1;
-  color: #0033a1;
-  padding: 0.3em 1em;
-  border-radius: 20px;
-  cursor: pointer;
   margin: 10px;
+  color: #0033a1;
 }
 
-.signup-button{
-  margin-right: 20px;
+.menu-button:hover{
+  color:#0033a1;
+  background: none;
 }
-.login-button:hover,
-.signup-button:hover {
+
+.login-button, .signup-button{
   color: white;
   background-color: #0033a1;
+}
+
+.login-button:hover, .signup-button:hover {
+  color: #0033a1;
+  background-color: orange;
+
+}
+
+.signup-button {
+  margin-right: 20px;
 }
 
 .contentContainer {
@@ -71,7 +72,6 @@
   width: 100%;
   height: 100%;
   background-color: rgb(0, 51, 161);
-
 }
 
 .mainContainer {
@@ -122,8 +122,6 @@
   overflow: hidden;
   padding: 2em;
   text-align: center;
-  /* Center content horizontally */
-  /* margin-top: 5%; */
 }
 
 .imageContainer img {
@@ -143,12 +141,13 @@
   margin:20px;
   font-size: 1.15rem;
 }
+
 .enterButton:hover {
   color: white;
   background-color: orange;
 }
-@media (max-width: 768px) {
 
+@media (max-width: 768px) {
   .topContainer {
     flex-direction: column;
     align-items: flex-start;
@@ -183,7 +182,7 @@
 
   .logoContainer .title {
     text-align: center;
-    font-size: 4em; 
+    font-size: 4em;
   }
 
   .secondTitle {

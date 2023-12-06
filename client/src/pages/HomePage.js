@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import "../pages/style/HomePage.css";
+import AuthButton from "../components/AuthButton";
 
 function HomePage() {
   const navigate = useNavigate();
@@ -38,9 +39,10 @@ function HomePage() {
               CUNY Blackboard
             </a>
           </button>
-          <button className="login-button" onClick={handleLoginClick}>
+          {/* <button className="login-button" onClick={handleLoginClick}>
             Log In
-          </button>
+          </button> */}
+          <AuthButton />
           <button className="signup-button" onClick={handleSignupClick}>
             Sign Up
           </button>
