@@ -2,8 +2,11 @@ import React from "react";
 import NavBar from "../components/NavBar";
 import "../pages/style/MainPage.css";
 import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
+import AnimatedTextCharacter from "../components/AnimatedTextCharacter";
 
-const MainPage = () => {
+
+function MainPage() {
   const navigate = useNavigate();
 
   const handleMeetTheTeamClick = () => {
@@ -11,21 +14,32 @@ const MainPage = () => {
   };
 
   return (
-    <div className="main-page">
+    <motion.div className="main-page">
       <NavBar />
       <div className="cunySphere">
-        <h1>CUNY Sphere</h1>
+        <AnimatedTextCharacter text="CUNY Sphere" />
       </div>
-      <div className="content-container">
-        <div className="image-container">
-          <img
+      <motion.div className="content-container">
+        <motion.div
+          className="image-container"
+          initial={{ x: -100, y: 100, opacity: 0 }}
+          animate={{ x: 0, y: 0, opacity: 1 }}
+          transition={{ duration: 1 }}
+        >
+          <motion.img
             src="../84-removebg.png"
             alt=""
-            className="img-hover"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.8, rotate: -90, borderRadius: "100%" }}
           />
-        </div>
-        <div className="text-container">
-          <div className="aboutCunySphere">
+        </motion.div>
+        <motion.div className="text-container">
+          <motion.div
+            className="aboutCunySphere"
+            initial={{ x: -100, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.5 }}
+          >
             <h2>About CUNY Sphere</h2>
             <p>
               Navigating the digital landscape of education, students often
@@ -39,8 +53,13 @@ const MainPage = () => {
               CUNY students for success.
             </p>
             {/* Add more paragraphs if needed */}
-          </div>
-          <div className="aboutUs">
+          </motion.div>
+          <motion.div
+            className="aboutUs"
+            initial={{ x: 100, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.5 }}
+          >
             <h2>CUNY Crafters</h2>
             <p>
               CUNY Crafters is a team of four students enrolled at the City
@@ -52,11 +71,17 @@ const MainPage = () => {
               shared vision to bring about positive change and enhance the
               college experience. Get to know us!
             </p>
-            <button onClick={handleMeetTheTeamClick}>Meet The Team</button>
-          </div>
-        </div>
-      </div>
-    </div>
+            <motion.button
+              onClick={handleMeetTheTeamClick}
+              whileHover={{ scale: 1.1 }}
+              transition={{ duration: 0.3 }}
+            >
+              Meet The Team
+            </motion.button>
+          </motion.div>
+        </motion.div>
+      </motion.div>
+    </motion.div>
   );
 };
 
