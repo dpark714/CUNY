@@ -93,13 +93,14 @@
 .logoContainer .title {
   text-align: left;
   font-size: 6em;
-  color: lightgray;
+  color: white;
   font-weight: 700;
 }
 
 .secondTitle {
   font-size: 3em;
   font-weight: 700;
+  color: orange;
 }
 
 .text-wrapper-1,

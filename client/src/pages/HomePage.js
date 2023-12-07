@@ -28,7 +28,7 @@ function HomePage() {
               href="https://www.cuny.edu/about/administration/offices/cis/cunyfirst/"
               style={{ textDecoration: "none", color: "#0033a1" }}
             >
-              CUNY
+              CUNYfirst
             </a>
           </button>
           <button className="menu-button">
@@ -63,7 +63,7 @@ function HomePage() {
             </h1>
             <p className="tagline">Uniting Students, Shaping Tomorrows</p>
           </div>
-          <button className="enterButton" onClick={handleEnterClick}>Click</button>
+          <button className="enterButton" onClick={handleEnterClick}>Visit CUNY Sphere</button>
         </div>
         <div className="imageContainer">
           <img src="ctp_homepage.png" alt="CUNY Students" />
