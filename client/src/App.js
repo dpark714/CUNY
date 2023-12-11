@@ -19,6 +19,19 @@ import { AuthProvider } from "./context/AuthContext";
 import PrivateRoute from "./components/PrivateRoute";
 import MainPage from "./pages/MainPage";
 
+
+//Upload files
+import UploadFile from "./pages/UploadFile";
+
+//Chatroom
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/auth';
+import 'firebase/compat/firestore';
+import 'firebase/compat/analytics';
+import 'firebase/compat/database';
+import ChatRoom from './components/ChatRoom';
+import ChatRoomOne from './components/ChatRoomOne'
+
 function Navigation(props) {
   const navStyle = {
     backgroundColor: "#0033a1",
@@ -71,8 +84,11 @@ function App() {
     <AuthProvider>
       <BrowserRouter>
         <div className="container-fluid">
+          {/* <section>
+          <ChatRoom />
+          </section> */}
           <Routes>
-            <Route path="/" element={<HomePage />} />
+            <Route path="" element={<HomePage />} />
             <Route path="/login" element={<LoginPage />} />
             <Route path="/signup" element={<SignupPage />} />
           </Routes>
@@ -90,8 +106,11 @@ function App() {
                 path="/job/resume-feedback"
                 element={<PrivateRoute>{<ResumeFeedbackPage />}</PrivateRoute>}
               />
+              <Route path="/file" element={<UploadFile />} />
               <Route path="/news" element={<PrivateRoute>{<NewsPage />}</PrivateRoute>} />
               <Route path="/course" element={<PrivateRoute>{<CoursePage />}</PrivateRoute>} />
+              <Route path="/course/chat/0" element={<PrivateRoute>{<ChatRoom />}</PrivateRoute>} />
+              <Route path="/course/chat/1" element={<PrivateRoute>{<ChatRoomOne />}</PrivateRoute>} />
             </Routes>
           </div>
         </div>

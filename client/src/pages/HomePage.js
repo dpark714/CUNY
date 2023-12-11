@@ -1,14 +1,36 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import { useNavigate } from "react-router-dom";
 import "../pages/style/HomePage.css";
 import AuthButton from "../components/AuthButton";
 
 function HomePage() {
   const navigate = useNavigate();
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-  const handleLoginClick = () => {
-    navigate("/login");
-  };
+  useEffect(() => {
+    const checkLoginStatus = async () => {
+      try {
+        const response = await fetch("/api/auth/login", {
+          method: "GET",
+          credentials: "include", // Include credentials for cookie-based authentication
+        });
+
+        console.log("Response status:", response.status);
+
+        if (response.ok) {
+          //const user = await response.json();
+          setIsLoggedIn(true);
+        } else {
+          setIsLoggedIn(false);
+        }
+      } catch (error) {
+        console.error("Error checking login status:", error);
+      }
+    };
+
+    checkLoginStatus();
+  }, []);
+  
 
   const handleSignupClick = () => {
     navigate("/signup");
@@ -43,9 +65,11 @@ function HomePage() {
             Log In
           </button> */}
           <AuthButton />
-          <button className="signup-button" onClick={handleSignupClick}>
-            Sign Up
-          </button>
+          {isLoggedIn ? null : (
+            <button className="signup-button" onClick={handleSignupClick}>
+              Sign Up
+            </button>
+          )}
         </div>
       </div>
 

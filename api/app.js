@@ -8,6 +8,7 @@ const app = express();
 const PORT = process.env.PORT;
 const cors = require('cors');
 
+
 // Use CORS middleware
 app.use(cors());
 

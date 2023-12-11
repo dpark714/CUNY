@@ -40,7 +40,7 @@ function MainPage() {
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.5 }}
           >
-            <h2>About CUNY Sphere</h2>
+            <h2 className="mainPageh2">About CUNY Sphere</h2>
             <p>
               Navigating the digital landscape of education, students often
               struggle to find reliable resources and connect with peers who
@@ -60,7 +60,7 @@ function MainPage() {
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.5 }}
           >
-            <h2>CUNY Crafters</h2>
+            <h2 className="mainPageh2">CUNY Crafters</h2>
             <p>
               CUNY Crafters is a team of four students enrolled at the City
               University of New York (CUNY), embarking on a transformative

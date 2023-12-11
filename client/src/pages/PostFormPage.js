@@ -26,7 +26,7 @@ function PostFormPage() {
         },
         body: JSON.stringify({
           content: data.content,
-          filePath: data.filePath,
+          fileName: data.fileName,
         }),
       });
 
@@ -41,7 +41,7 @@ function PostFormPage() {
     }
   };
 
-  if (success) return <Navigate to="/job/career-crafters" />;
+  if (success) return <Navigate to="/job" />;
 
   return (
     <div className="d-flex justify-content-center">
@@ -68,9 +68,9 @@ function PostFormPage() {
             <input
               type="file"
               id="file"
-              value={data.filePath}
+              value={data.fileName}
               className="form-control"
-              onChange={fieldChanged("filePath")}
+              onChange={fieldChanged("fileName")}
             />
           </div>
           <button type="submit" className="btn btn-primary">

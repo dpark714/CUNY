@@ -12,14 +12,14 @@ const upload = multer({ storage: storage });
 app.post('/api/micro_posts', upload.single('file'), (req, res) => {
   try {
     // Access the uploaded file using req.file
-    const filePath = req.filePath;
+    const fileName = req.fileName;
 
     // Access other form data using req.body
     const content = req.body.content;
 
     // Process the file and content as needed
     console.log('Content:', content);
-    console.log('File:', filePath);
+    console.log('File:', fileName);
 
     // Respond with a success message
     res.status(200).json({ message: 'File uploaded successfully.' });

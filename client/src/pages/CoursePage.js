@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 import '../pages/style/CoursePage.css'; // Make sure the CSS file is in the same directory
 import NavBar from '../components/NavBar';
 
@@ -26,7 +27,13 @@ const CoursePage = () => {
         <tbody>
           {courses.map((course, index) => (
             <tr key={index}>
-              <td>{course.name}</td>
+              <td>
+                {/* Wrap the course name with Link */}
+                <Link to={`/course/chat/${index}`}>
+                  {course.name}
+                </Link>
+              </td>
+              {/* <td>{course.name}</td> */}
               <td>{course.time}</td>
               <td>{course.days}</td>
               <td>{course.professor}</td>
