@@ -44,12 +44,12 @@ function PostFormPage() {
   if (success) return <Navigate to="/job" />;
 
   return (
-    <div className="d-flex justify-content-center">
-      <div className="col-lg-7 mx-auto"> {/* Add mx-auto class here */}
+    <div className="row justify-content-center">
+      <div className="col-lg-7 col-md-8 col-sm-10"> {/* Add mx-auto class here */}
         {error && <ErrorAlert details={"Failed to save the content"} />}
         <form onSubmit={handleSubmit}>
           <div className="mb-3">
-            <label htmlFor="content" className="form-label">
+            <label htmlFor="content" className="post-form-label">
               Message
             </label>
             <input
@@ -73,7 +73,7 @@ function PostFormPage() {
               onChange={fieldChanged("fileName")}
             />
           </div>
-          <button type="submit" className="btn btn-primary">
+          <button type="submit" className="btn post-form-button">
             Save Post
           </button>
         </form>

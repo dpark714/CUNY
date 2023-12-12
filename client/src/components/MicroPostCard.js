@@ -16,7 +16,8 @@ function MicroPostCard({ content, fileName, createdAt, id }) {
       <object
               style={{ width: '100%', height: '1000px' }}
               type="application/pdf"
-              data={`https://pdfsaverbucketctp.s3.amazonaws.com/${fileName}`}>
+              // data={`https://pdfsaverbucketctp.s3.amazonaws.com/${fileName}`}>
+              data={`https://cuny-sphere.s3.amazonaws.com/${fileName}`}>
               Unable to display PDF
             </object>
      

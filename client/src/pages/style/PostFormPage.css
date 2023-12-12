@@ -8,15 +8,15 @@
   
   /* Form Styles */
   .col-10 {
-    width: 83.333333%;
+    width: 85%;
   }
   
   .col-md-8 {
-    width: 66.666667%;
+    width: 70%;
   }
   
   .col-lg-7 {
-    width: 58.333333%;
+    width: 75%;
     align-items: center;
   }
   
@@ -24,8 +24,8 @@
     margin-bottom: 1rem;
   }
   
-  .form-label {
-    margin-bottom: 0.5rem;
+  .post-form-label {
+    margin-bottom: 1rem;
   }
   
   .form-control {
@@ -42,13 +42,13 @@
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   }
   
-  .btn-primary {
+  .post-form-button {
     color: #fff;
     background-color: #007bff;
     border-color: #007bff;
   }
   
-  .btn-primary:hover {
+  .post-form-button:hover {
     color: #fff;
     background-color: #0056b3;
     border-color: #0056b3;

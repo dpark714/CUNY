@@ -37,16 +37,14 @@ function JobPage() {
       <NavBar onJobClick={toggleTabs} />
       {showTabs && <JobTabs />}
       <div className="resume-feedback">
-        <h1>Resume</h1>
+        <h1 className="resume-section-title">Resume</h1>
         <PostsListPage />
-        {/* Add content for CareerConnect here  */}
         {/* <PostFormPage />
         <PostsListPage /> */}
       </div>
-      <div className="career-connect">
+      {/* <div className="career-connect">
         <h1>CareerConnect</h1>
-        {/* Add content for CareerCrafters here  */}
-      </div>
+      </div> */}
     </div>
   );
 }

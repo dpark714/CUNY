@@ -1,4 +1,4 @@
-.job-dropdown {
+/* .job-dropdown {
     position: relative;
     display: inline-block;
   }
@@ -35,4 +35,22 @@
   .job-dropdown:hover h1 {
     background-color: #ddd;
   }
-  
+   */
+
+.job-page {
+  text-align: center;
+}
+
+.resume-feedback {
+
+  margin: 20px;
+  padding: 20px;
+  text-align: center;
+
+}
+
+.resumeH1 {
+
+  font-size: 3rem;
+
+}
