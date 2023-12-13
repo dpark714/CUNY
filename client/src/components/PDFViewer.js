@@ -9,7 +9,7 @@ const PDFViewer = ({ pdfUrl, fileName }) => {
         src={`https://docs.google.com/gview?url=${pdfUrl}&embedded=true`}
       >
         <p>
-          Your browser does not support embedded PDF files. Download the PDF
+          Your browser does not support embedded PDF files.
           <a href={pdfUrl} download={fileName}>
             Download the PDF
           </a>

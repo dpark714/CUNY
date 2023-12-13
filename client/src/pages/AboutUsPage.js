@@ -1,8 +1,6 @@
 import React from "react";
 import "../pages/style/AboutUsPage.css";
 import NavBar from "../components/NavBar";
-import OvalShape from "../components/OvalShape";
-import WaveAnimation from "../components/WaveAnimation";
 import Waves from "../components/Waves";
 
 function AboutUsPage(props) {
@@ -52,14 +50,15 @@ function AboutUsPage(props) {
                   <em>Software Engineer</em>
                 </p>
                 <p className="description">
-                  Amir stands out as an experienced full-stack software engineer,
-                  recognized for his proficiency in crafting smooth user
-                  interfaces and resilient backend systems. Possessing a diverse
-                  skill set and a dedication to staying ahead of industry
-                  advancements, Amir thrives in providing top-notch solutions.
-                  His collaborative approach, adept problem-solving abilities,
-                  and unwavering commitment to ongoing learning position him as
-                  a valuable contributor to any development team.
+                  Amir stands out as an experienced full-stack software
+                  engineer, recognized for his proficiency in crafting smooth
+                  user interfaces and resilient backend systems. Possessing a
+                  diverse skill set and a dedication to staying ahead of
+                  industry advancements, Amir thrives in providing top-notch
+                  solutions. His collaborative approach, adept problem-solving
+                  abilities, and unwavering commitment to ongoing learning
+                  position him as a valuable contributor to any development
+                  team.
                 </p>
                 <a
                   className="linkedInIcon"
@@ -107,11 +106,11 @@ function AboutUsPage(props) {
                 </p>
 
                 <p className="description">
-                  My role in CUNY Sphere is centered upon front-end development.
-                  My goal is to create a user interface that is not only
-                  stylish, but also intuitive and responsive. I am also bringing
-                  innovative solutions and a strategic approach to CUNY Sphere's
-                  architecture.
+                  Benjamin, a student studying computer science at Hunter
+                  College, specializes in full-stack development. He is creating
+                  a stylish user interface, as well as implementing AWS and
+                  Postgresql. He is also bringing innovative solutions and a
+                  strategic approach to CUNY Sphere's architecture.
                 </p>
                 <a
                   className="linkedInIcon"
@@ -262,8 +261,11 @@ function AboutUsPage(props) {
         </div>
       </div>
       <div className="additionalDiv">
-        <img className ="slogan" src="../slogan.png"/>
-        <p>&copy; 2023 CUNY Tech Prep, Amir Hamza, Benjamin Zhang, Dahyeon Park, Omar Abdullah. All rights reserved.</p>
+        <img className="slogan" src="../slogan.png" />
+        <p className="copyright">
+          &copy; 2023 CUNY Tech Prep, Amir Hamza, Benjamin Zhang, Dahyeon Park,
+          Omar Abdullah. All rights reserved.
+        </p>
       </div>
     </div>
   );

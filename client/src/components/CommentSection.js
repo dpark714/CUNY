@@ -1,4 +1,5 @@
 import React, { useState, useRef } from "react";
+import { Navigate } from "react-router-dom";
 import cn from "classnames";
 import useDynamicHeightField from "./useDynamicHeightField";
 import "./style.css";
@@ -65,7 +66,8 @@ export default function CommentBox(props) {
           setSuccess(true);
           setCommentValue("");
           setIsExpanded(false);
-
+          // window.location.reload();
+          <Navigate to="/Job" />;
 
         } else {
           setError(true);

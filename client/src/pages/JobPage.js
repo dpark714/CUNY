@@ -4,7 +4,6 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import NavBar from "../components/NavBar";
 import "../pages/style/JobPage.css";
-import PostFormPage from "./PostFormPage";
 import PostsListPage from "./PostsListPage";
 
 function JobTabs() {

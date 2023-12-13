@@ -96,7 +96,7 @@ function App() {
             <Route path="/signup" element={<SignupPage />} />
           </Routes>
 
-          <div className="row justify-content-center">
+          <div className="justify-content-center">
             <Routes>
               <Route path="/main" element={<MainPage />} />
               <Route path="/about-us" element={<AboutUsPage />} />

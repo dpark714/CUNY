@@ -138,6 +138,11 @@ a:hover {
   object-fit: fill;
 }
 
+.copyright{
+  margin-bottom: -20px;
+}
+
+
 @media (max-width: 768px) {
   .teamDes{
     flex-basis: 100%;

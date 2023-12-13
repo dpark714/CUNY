@@ -33,7 +33,9 @@ export default function CommentSection(props) {
   return (
     <div className="container-fluid text-center">
       <div className="row justify-content-center">
-        {comments.map((comment) => (
+        {comments
+        .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt))
+        .map((comment) => (
           <li key={comment.id + comment.createdAt}>{comment.content}</li>
         ))}
       </div>
