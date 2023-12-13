@@ -1,44 +1,18 @@
-.job-page {
-  /* display: flex;
-  flex-direction: column; */
-  align-items: center;
-  /* padding: 20px; */
+/* JobPage.css */
+
+.background-image {
+  background-image: url('../../../public/Saly-23.png');
+  background-size: cover;
+  background-position: center;
+  height: 300px; /* Adjust the height as needed */
+  opacity: 0.5;
 }
 
-.job-tabs {
-  list-style: none;
-  padding: 0;
-  margin: 20px 0;
-  display: flex;
-}
-
-.job-tab-item {
-  margin-right: 20px;
-}
-
-.job-tab-link {
-  text-decoration: none;
-  color: #333;
-  font-weight: bold;
-  font-size: 16px;
-  transition: color 0.3s ease-in-out;
-}
-
-.job-tab-link:hover {
-  color: #007bff;
-}
-
-.resume-feedback,
-.career-connect {
-  background-color: #f8f9fa;
-  border-radius: 8px;
-  padding: 20px;
-  margin: 20px 0;
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+.resume-section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
   text-align: center;
+  margin: 20px;
 }
 
-.section-title {
-  margin-bottom: 20px;
-  color: #007bff;
-}
+/* Add other styles as needed */

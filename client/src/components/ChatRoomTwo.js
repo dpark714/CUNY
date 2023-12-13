@@ -1,20 +1,21 @@
 import { useState, useRef, useEffect } from 'react';
-import { app } from '../firebase';
-import { getDatabase, ref, push, onValue } from 'firebase/database';
+import { appTwo } from '../firebase';
+import { getDatabase, ref, get, push, onValue } from 'firebase/database';
 import { useAuth } from '../context/AuthContext';
 
 
+const databaseTwo = getDatabase(appTwo);
+const messagesRefTwo = ref(databaseTwo, 'messages');
 
-const database = getDatabase(app);
-const messagesRef = ref(database, 'messages');
-
-function ChatRoom() {
+function ChatRoomTwo() {
   const dummy = useRef();
-  const query = messagesRef;
+  
+  const query = messagesRefTwo;
 
   const [messages, setMessages] = useState([]);
   const [formValue, setFormValue] = useState('');
   const auth = useAuth();
+
 
   useEffect(() => {
     const fetchData = async () => {
@@ -36,11 +37,8 @@ function ChatRoom() {
 
   const sendMessage = async (e) => {
     e.preventDefault();
-
-    // const userFirstName = auth.user ? auth.user.firstName || 'Guest' : 'Guest';
     const userFirstName = auth.user.firstName;
-    console.log(userFirstName + 'hi');
-    await push(messagesRef, {
+    await push(messagesRefTwo, {
       text: formValue,
       createdAt: { '.sv': 'timestamp' },
       userFirstName: userFirstName,
@@ -74,4 +72,4 @@ function ChatRoom() {
   );
 }
 
-export default ChatRoom;
+export default ChatRoomTwo;

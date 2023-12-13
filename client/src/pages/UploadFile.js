@@ -10,18 +10,18 @@ function App() {
   // Function to upload file to s3
   const uploadFile = async () => {
     // S3 Bucket Name
-    // const S3_BUCKET = "pdfsaverbucketctp";
-    const S3_BUCKET = "cuny-sphere";
+    const S3_BUCKET = "pdfsaverbucketctp";
+    // const S3_BUCKET = "cuny-sphere";
 
 
     // S3 Region
-    const REGION = "us-east-1";
+    const REGION = "us-east-2";
 
 
     // S3 Credentials
     AWS.config.update({
-        accessKeyId: "AKIASRMCTINZFB5WWM6L",
-        secretAccessKey: "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",
+        accessKeyId: "",
+        secretAccessKey: "",
     });
     const s3 = new AWS.S3({
       params: { Bucket: S3_BUCKET },

@@ -27,7 +27,8 @@ function MainPage() {
           transition={{ duration: 1 }}
         >
           <motion.img
-            src="../84-removebg.png"
+          className="mainPage-img"
+            src="../Saly-1.png"
             alt=""
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.8, rotate: -90, borderRadius: "100%" }}

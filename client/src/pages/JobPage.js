@@ -1,20 +1,16 @@
+// JobPage.jsx
+
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import NavBar from "../components/NavBar";
-import "../pages/style/JobPage.css"; // Ensure the CSS file is correctly referenced
+import "../pages/style/JobPage.css";
 import PostFormPage from "./PostFormPage";
 import PostsListPage from "./PostsListPage";
 
 function JobTabs() {
   return (
     <div>
-      {/* You can customize the tabs as needed */}
       <ul className="nav nav-tabs">
-        <li className="nav-item">
-          <NavLink className="nav-link" to="/job/career-connect">
-            Career Connect
-          </NavLink>
-        </li>
         <li className="nav-item">
           <NavLink className="nav-link" to="/job/resume-feedback">
             Resume Feedback
@@ -26,7 +22,7 @@ function JobTabs() {
 }
 
 function JobPage() {
-  const [showTabs, setShowTabs] = useState(true); // Set to true by default
+  const [showTabs, setShowTabs] = useState(true);
 
   const toggleTabs = () => {
     setShowTabs(!showTabs);
@@ -36,15 +32,11 @@ function JobPage() {
     <div className="job-page">
       <NavBar onJobClick={toggleTabs} />
       {showTabs && <JobTabs />}
+      <div className="background-image" />
+      <h1 className="resume-section-title">Resume</h1>
       <div className="resume-feedback">
-        <h1 className="resume-section-title">Resume</h1>
         <PostsListPage />
-        {/* <PostFormPage />
-        <PostsListPage /> */}
       </div>
-      {/* <div className="career-connect">
-        <h1>CareerConnect</h1>
-      </div> */}
     </div>
   );
 }

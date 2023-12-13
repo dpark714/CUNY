@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import "./OvalShape.css"; // Import your CSS file for styling
+import "./OvalShape.css";
 
 function OvalShape() {
   return (

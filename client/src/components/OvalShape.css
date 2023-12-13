@@ -4,7 +4,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
-    height: 50vh; /* Adjust the value according to your design */
+    height: 50vh; 
   }
   
   .primaryView {
@@ -17,7 +17,7 @@
     flex: 3;
     display: flex;
     align-items: center;
-    justify-content: center; /* Add this line to center the content vertically */
+    justify-content: center; 
     background-color: #4646ff;
     border-bottom-left-radius: 50%;
     border-bottom-right-radius: 50%;
@@ -29,6 +29,6 @@
     color: #ffffff;
     margin-top: 20px;
     margin-bottom: 20px;
-    text-align: center; /* Add this line to center the text horizontally */
+    text-align: center; 
   }
   

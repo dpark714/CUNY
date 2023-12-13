@@ -52,7 +52,7 @@ function AboutUsPage(props) {
                   <em>Software Engineer</em>
                 </p>
                 <p className="description">
-                  stands out as an experienced full-stack software engineer,
+                  Amir stands out as an experienced full-stack software engineer,
                   recognized for his proficiency in crafting smooth user
                   interfaces and resilient backend systems. Possessing a diverse
                   skill set and a dedication to staying ahead of industry
@@ -262,7 +262,6 @@ function AboutUsPage(props) {
         </div>
       </div>
       <div className="additionalDiv">
-        {/* Your content for the additional div goes here */}
         <img className ="slogan" src="../slogan.png"/>
         <p>&copy; 2023 CUNY Tech Prep, Amir Hamza, Benjamin Zhang, Dahyeon Park, Omar Abdullah. All rights reserved.</p>
       </div>

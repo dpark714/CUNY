@@ -2,9 +2,9 @@
 
 main {
     display: flex;
-    flex-direction: column-reverse; /* Stack messages vertically, and reverse order */
-    height: 100vh; /* Set a height to make the chat scrollable */
-    overflow-y: auto; /* Enable vertical scrolling */
+    flex-direction: column-reverse;
+    height: 100vh; 
+    overflow-y: auto; 
   }
   
   .message {
@@ -14,8 +14,8 @@ main {
   }
   
   .message img {
-    width: 40px; /* Adjust image width as needed */
-    height: 40px; /* Adjust image height as needed */
+    width: 40px; 
+    height: 40px;
     border-radius: 50%;
     margin-right: 8px;
   }

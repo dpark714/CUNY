@@ -50,12 +50,12 @@ body, html {
 
 .firstTitle {
     font-size: 2.5em;
-    /* Adjust the font size as needed */
+
 }
 
 .secondTitle {
     font-size: 1.5em;
-    /* Adjust the font size as needed */
+  
 }
 
 .rightSide h1 {
@@ -65,34 +65,34 @@ body, html {
 }
 
 .leftSide img {
-    width: 100%; /* Set a width for the image */
-    max-width: 400px; /* Add a max-width to ensure responsiveness */
+    width: 100%; 
+    max-width: 400px; 
 }
 
-/* Media Query for Responsiveness */
+
 @media (max-width: 768px) {
     .loginContainer {
         flex-direction: column;
-        /* Stack the elements vertically on smaller screens */
+
     }
 
     .leftSide, .rightSide {
         width: 100%;
-        /* Make both sides take up the full width on smaller screens */
+
     }
 
     .firstTitle {
         font-size: 2em;
-        /* Adjust the font size for smaller screens */
+  
     }
 
     .secondTitle {
         font-size: 1em;
-        /* Adjust the font size for smaller screens */
+    
     }
 
     form {
         width: 100%;
-        /* Make the form take up the full width on smaller screens */
+      
     }
 }
